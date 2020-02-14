@@ -49,17 +49,19 @@ class _RumahState extends State<Rumah> {
         appBar: AppBar(
           title: Text("OOF"),
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              ListTile(
+                title: Text("data"),
+              )
+            ],
+          ),
+        ),
         body: Center(
-          child: Container(
-              child: Stack(children: [
-            Positioned(
-                top: 225,
-                left: 160,
-                child: RaisedButton(
-                  onPressed: () => _audioCache.play('roblox-death-sound_1.mp3'),
-                  child: Text("oof"),
-                ))
-          ])),
-        ));
+            child: RaisedButton(
+          onPressed: () => _audioCache.play('roblox-death-sound_1.mp3'),
+          child: Text("oof"),
+        )));
   }
 }
